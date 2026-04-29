@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ☀️ SunCart – Summer Essentials Store
 
-## Getting Started
+A modern summer eCommerce platform where users can explore and purchase seasonal products like sunglasses, summer outfits, skincare, and beach accessories.
 
-First, run the development server:
+## 🔗 Live URL
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[https://your-live-url.vercel.app](https://your-live-url.vercel.app)
+
+---
+
+## ✨ Key Features
+
+- 🛍️ Browse summer products with details (name, price, rating, stock)
+- 🔒 Protected product detail pages — login required to view
+- 🔐 Authentication via **BetterAuth** (Email/Password + Google OAuth)
+- 👤 User profile page with name, email, and photo
+- ✏️ Update profile information (name & avatar)
+- 📱 Fully responsive — mobile, tablet, and desktop
+- 🎨 Smooth animations using **Animate.css / React-Spring / Lottie**
+- 🌅 Hero section with summer sale banners
+- 🔥 Popular products section and summer care tips
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| [Next.js](https://nextjs.org/) | React framework with App Router |
+| [Tailwind CSS](https://tailwindcss.com/) | Utility-first styling |
+| [DaisyUI](https://daisyui.com/) | Tailwind component library |
+| [BetterAuth](https://better-auth.com/) | Authentication |
+
+---
+
+## 📦 NPM Packages Used
+
+| Package | Purpose |
+|---------|---------|
+| `better-auth` | Authentication (email + Google OAuth) |
+| `animate.css` | UI animations |
+| `react-hot-toast` | Toast notifications |
+
+---
+---
+
+## 🔐 Environment Variables
+
+Create a `.env.local` file in the root:
+
+```env
+BETTER_AUTH_SECRET=your_secret_key
+BETTER_AUTH_URL=http://localhost:3000
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> ⚠️ Never commit `.env.local` to GitHub.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+```bash
+# Clone the repo
+git clone https://github.com/your-username/suncart.git
+cd suncart
 
-To learn more about Next.js, take a look at the following resources:
+# Install dependencies
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Run the development server
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

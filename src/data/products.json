@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Summer Linen Outfit Set",
+    "brand": "BreezeWear",
+    "price": 35,
+    "rating": 4.6,
+    "stock": 18,
+    "description": "Lightweight linen outfit designed for hot summer days.",
+    "image": "https://images.unsplash.com/photo-1520975922284-9f1a0c1d3a1b?auto=format&fit=crop&w=800&q=80",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "Hydrating Aloe Vera Skincare Gel",
+    "brand": "GlowNaturals",
+    "price": 10,
+    "rating": 4.8,
+    "stock": 30,
+    "description": "Cooling aloe vera gel for skin hydration and sunburn relief.",
+    "image": "https://images.unsplash.com/photo-1612810436541-336d0e4a0c7c?auto=format&fit=crop&w=800&q=80",
+    "category": "Skincare"
+  },
+  {
+    "id": 4,
+    "name": "Beach Straw Hat",
+    "brand": "SunGuard",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 22,
+    "description": "Wide-brim straw hat for sun protection and beach style.",
+    "image": "https://images.unsplash.com/photo-1520975682031-ae0a1d2a6c1a?auto=format&fit=crop&w=800&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 5,
+    "name": "Insulated Water Bottle",
+    "brand": "HydraMax",
+    "price": 18,
+    "rating": 4.9,
+    "stock": 40,
+    "description": "Keeps your drinks cold for hours during summer heat.",
+    "image": "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=800&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 6,
+    "name": "Beach Tote Bag",
+    "brand": "OceanCarry",
+    "price": 22,
+    "rating": 4.4,
+    "stock": 16,
+    "description": "Spacious and stylish tote bag for beach essentials.",
+    "image": "https://images.unsplash.com/photo-1520975954732-35dd2229963f?auto=format&fit=crop&w=800&q=80",
+    "category": "Accessories"
+  }
+]
