@@ -1,18 +1,16 @@
 import { betterAuth } from "better-auth";
+import { betterAuth } from "better-auth";
+import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
-import { client } from "@/db"; // your mongodb client
+
+const client = new MongoClient("mongodb://localhost:27017/database");
+const db = client.db();
 
 export const auth = betterAuth({
-    database: mongodbAdapter(client),
-      emailAndPassword: { 
-    enabled: true, 
-  }, 
-  socialProviders: { 
-    github: { 
-      clientId: process.env.GITHUB_CLIENT_ID as string, 
-      clientSecret: process.env.GITHUB_CLIENT_SECRET as string, 
-    }, 
-  }, 
+  database: mongodbAdapter(db, {
+    // Optional: if you don't provide a client, database transactions won't be enabled.
+    client
+  }),
 });
 
 mongodb+srv://nazrulavash_db_user:fwbQPugnyZnoReSV@cluster0.vkhaact.mongodb.net/?appName=Cluster0
