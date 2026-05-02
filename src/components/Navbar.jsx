@@ -41,7 +41,7 @@ const Navbar = () => {
       <li>
         <Link href={'/'}>Products</Link>
       </li>
-      <li><Link href={'/'}>My Profile</Link></li>
+      <li><Link href={'/profile'}>My Profile</Link></li>
     </ul>
   </div>
   <div className="navbar-end flex gap-4">
