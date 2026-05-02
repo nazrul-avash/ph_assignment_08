@@ -2,7 +2,7 @@ import React from 'react';
 
 const TopBrands = () => {
     return (
-      <section className="bg-gray-50 py-10 px-6 rounded-2xl max-w-4xl mx-auto my-10 shadow-sm">
+      <section className="bg-[#FF9A3C]/60 py-10 px-6 rounded-2xl max-w-4xl mx-auto my-10 shadow-sm">
       
       <h2 className="text-2xl font-bold text-gray-800 mb-6">
          Top Brands

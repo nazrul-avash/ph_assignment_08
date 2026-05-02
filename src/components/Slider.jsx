@@ -15,16 +15,17 @@ const Slider = () => {
 
 
     return (
-       <div className="w-full h-[500px] md:h-[550px] relative overflow-hidden rounded-3xl shadow-lg my-4">
+       <div className="w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] relative overflow-hidden rounded-3xl shadow-lg my-4">
 
         {
-            transitions((style,i)=>(
+            transitions((style,index)=>(
                 <animated.div style={{ ...style, position: 'absolute', inset: 0 }}>
                          <Image
-                                src={slides[i]}
+                                src={slides[index]}
                                 fill
                                 alt="slider" 
-                                className="object-cover"
+                                className="object-cover object-top"
+                                priority
                             />
                 </animated.div>
             ))

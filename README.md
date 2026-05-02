@@ -38,7 +38,7 @@ A modern summer eCommerce platform where users can explore and purchase seasonal
 | Package | Purpose |
 |---------|---------|
 | `better-auth` | Authentication (email + Google OAuth) |
-| `animate.css` | UI animations |
+| `react-spring` | UI Slider animations |
 | `react-hot-toast` | Toast notifications |
 
 ---

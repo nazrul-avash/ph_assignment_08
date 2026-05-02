@@ -16,7 +16,7 @@ const ProfilePage = () => {
   }
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-pink-100 p-4">
+        <div className="flex items-center justify-center min-h-screen  p-4">
   <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md text-center">
 
     {/* Profile Image */}

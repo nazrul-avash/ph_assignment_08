@@ -13,7 +13,7 @@ const Navbar = () => {
     await authClient.signOut();
   }
     return (
-        <div className="navbar bg-[#D85A30] shadow-sm ">
+        <div className="navbar bg-[#FF9A3C] shadow-sm px-1 md:px-20 ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,15 +22,11 @@ const Navbar = () => {
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
+        <li><Link href={'/'}>Home</Link></li>
+      <li>
+        <Link href={'/'}>Products</Link>
+      </li>
+      <li><Link href={'/profile'}>My Profile</Link></li>
       </ul>
     </div>
     <Image className=' object-contain w-16' src={logo} alt='logo' ></Image>
@@ -47,12 +43,23 @@ const Navbar = () => {
   <div className="navbar-end flex gap-4">
     {!user && (
             <ul className="flex items-center  text-sm gap-5">
-              <li>
-                <Link href={"/register"}>SignUp</Link>
-              </li>
-              <li>
-                <Link href={"/login"}>SignIn</Link>
-              </li>
+             <li>
+  <Link
+    href="/register"
+    className="bg-[#FF6B6B] text-[#1A1A2E] px-3 py-2 rounded-full font-semibold hover:bg-[#ff5252] transition-all duration-200"
+  >
+    Sign Up
+  </Link>
+</li>
+
+<li>
+  <Link
+    href="/login"
+    className="bg-[#FF9A3C] text-[#1A1A2E] px-3 py-2 rounded-full font-semibold hover:bg-[#e8873a] transition-all duration-200"
+  >
+    Sign In
+  </Link>
+</li>
             </ul>
           )}
           {user && (

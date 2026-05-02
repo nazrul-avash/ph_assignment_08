@@ -3,7 +3,7 @@ import React from 'react';
 const Tips = () => {
     return (
         
-    <div className="bg-yellow-50 py-10 px-6 rounded-2xl  mx-auto my-10 shadow-sm">
+    <div className="bg-[#FF9A3C]/60 py-10 px-6 rounded-2xl  mx-auto my-10 shadow-sm">
       
       <h2 className="text-2xl font-bold text-gray-800 mb-6">
          Summer Care Tips
