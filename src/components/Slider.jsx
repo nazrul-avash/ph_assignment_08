@@ -18,10 +18,10 @@ const Slider = () => {
        <div className="w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] relative overflow-hidden rounded-3xl shadow-lg my-4">
 
         {
-            transitions((style,index)=>(
+            transitions((style,i)=>(
                 <animated.div style={{ ...style, position: 'absolute', inset: 0 }}>
                          <Image
-                                src={slides[index]}
+                                src={slides[i]}
                                 fill
                                 alt="slider" 
                                 className="object-cover object-top"
