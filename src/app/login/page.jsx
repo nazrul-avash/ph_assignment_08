@@ -2,10 +2,17 @@
 import { authClient } from '@/lib/auth-client';
 import { Check } from '@gravity-ui/icons';
 import { Button, Card, Description, FieldError, Form, Input, Label, TextField } from '@heroui/react';
+import Link from 'next/link';
+import { useRouter, useSearchParams } from 'next/navigation';
+
 import React from 'react';
 import { GrGoogle } from 'react-icons/gr';
 
 const LoginPage = () => {
+  const router = useRouter();
+   const searchParams = useSearchParams();
+     const callbackUrl = searchParams.get('callbackUrl') || '/';
+     console.log(callbackUrl);
     const onSubmit = async (e) => {
         e.preventDefault();
 
@@ -15,8 +22,9 @@ const LoginPage = () => {
         const { data, error } = await authClient.signIn.email({
         email,
         password,
-        callbackURL: "/",
+        callbackURL: callbackUrl,
     });
+    router.push(callbackUrl);
 
   
   };
@@ -93,13 +101,15 @@ const LoginPage = () => {
       >
         <Check size={15} /> Submit
       </Button>
-      <Button
-        type="reset"
+      <Link href={"/register"} className='inline-block'>
+        <Button
+       
         variant="secondary"
         className="border-[1.5px] border-orange-300 text-orange-700 hover:bg-orange-50 rounded-xl px-5 py-2.5 text-sm transition-colors bg-transparent"
       >
-        Reset
+       Register
       </Button>
+      </Link>
     </div>
   </Form>
 

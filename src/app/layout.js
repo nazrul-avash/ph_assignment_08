@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ToastContainer } from "react-toastify";
 
 
 const poppins = Poppins({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
         <main className="max-w-7xl mx-auto">{children} </main>
 
         <Footer></Footer>
+         <ToastContainer />
         </body>
     </html>
   );

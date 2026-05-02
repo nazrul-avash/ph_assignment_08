@@ -4,6 +4,8 @@ import React from 'react';
 import {Check} from '@gravity-ui/icons';
 import { useRouter } from 'next/navigation';
 import { authClient } from '@/lib/auth-client';
+import { toast } from 'react-toastify';
+import Link from 'next/link';
 
 const RegisterPage = () => {
     const router = useRouter();
@@ -23,16 +25,20 @@ const RegisterPage = () => {
     })
     
 
-    console.log({data, error})
+   
 
     if(!error) {
-        router.push('/')
+        router.push('/login')
+    }
+    if(error){
+      
+        toast.error(error.message);
     }
 
   };
     return (
    
-            <Card className="border-orange-100 border-2 mx-auto w-125 py-10 mt-5 bg-orange-50/40 shadow-sm rounded-2xl my-10">
+<Card className="border-orange-100 border-2 mx-auto w-125 py-10 mt-5 bg-orange-50/40 shadow-sm rounded-2xl my-10">
   <h1 className="text-center text-2xl font-bold text-orange-700 mb-1">Sign Up</h1>
   <p className="text-center text-sm text-orange-400 mb-6">Join us this summer ☀️</p>
 
@@ -80,6 +86,11 @@ const RegisterPage = () => {
       <Button type="reset" variant="secondary" className="text-sm text-orange-500 border border-orange-200 hover:bg-orange-100 px-5 py-2 rounded-xl transition-colors">
         Reset
       </Button>
+      <Link href="/login" className="inline-block">
+    <Button type="button" variant="secondary" className="text-sm text-orange-500 border border-orange-200 hover:bg-orange-100 px-5 py-2 rounded-xl transition-colors">
+      Login
+    </Button>
+  </Link>
     </div>
   </Form>
 </Card>
