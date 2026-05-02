@@ -36,8 +36,9 @@ const Navbar = () => {
       <li><Link href={'/'}>My Profile</Link></li>
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn bg-teal-500 border-0">Login</a>
+  <div className="navbar-end flex gap-4">
+    <Link href="/login" className="px-5 py-2 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:border-gray-400 transition-all duration-200">Log in</Link>
+    <Link href="/register" className="px-5 py-2 rounded-full bg-black text-white text-sm font-semibold shadow-sm hover:bg-gray-800 transition-all duration-200 ">Register</Link>
   </div>
 </div>
     );
