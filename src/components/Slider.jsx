@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 const Slider = () => {
-    const slides = ["/slider2.png", "/slider3.png","/slider4.png"];
+    const slides = ["/slider2.png", "/Slider3.png","/Slider4.png"];
     const [index, setIndex] =useState(0);
    const transitions = useTransition(index, {
     key:index,
