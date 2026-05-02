@@ -19,7 +19,6 @@ const ProfilePage = () => {
         <div className="flex items-center justify-center min-h-screen  p-4">
   <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md text-center">
 
-    {/* Profile Image */}
     <div className="flex justify-center mb-4">
       <Image
         src={user.image || "/default-avatar.png"}
@@ -30,7 +29,7 @@ const ProfilePage = () => {
       />
     </div>
 
-    {/* Name */}
+
     <h1 className="text-2xl font-bold text-gray-800">
       {user.name}
     </h1>
@@ -40,7 +39,7 @@ const ProfilePage = () => {
       {user.email}
     </p>
 
-    {/* Update Button */}
+
     <UpdateProfileModal></UpdateProfileModal>
 
   </div>

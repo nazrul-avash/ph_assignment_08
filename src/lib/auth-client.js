@@ -4,6 +4,6 @@ export const authClient = createAuthClient({
     baseURL: process.env.BETTER_AUTH_URL,
     trustedOrigins: [
     "https://ph-assignment-08-qoz5.vercel.app",
-    "http://localhost:3000", // keep for local dev
+    "http://localhost:3000", 
   ],
 })
