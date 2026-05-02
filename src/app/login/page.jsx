@@ -5,10 +5,11 @@ import { Button, Card, Description, FieldError, Form, Input, Label, TextField } 
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-import React from 'react';
+import React, { Suspense, useState } from 'react';
 import { GrGoogle } from 'react-icons/gr';
 
 const LoginPage = () => {
+  const [errorMsg, setErrorMsg] = useState('');
   const router = useRouter();
    const searchParams = useSearchParams();
      const callbackUrl = searchParams.get('callbackUrl') || '/';
@@ -24,6 +25,10 @@ const LoginPage = () => {
         password,
         callbackURL: callbackUrl,
     });
+    if (error) {
+          setErrorMsg(error.message || 'Invalid email or password');
+          return; 
+}
     router.push(callbackUrl);
 
   
@@ -93,7 +98,9 @@ const LoginPage = () => {
       </Description>
       <FieldError className="text-xs text-red-500 mt-1" />
     </TextField>
-
+    {errorMsg && (
+      <p className="text-xs text-red-500 mt-1">{errorMsg}</p>
+    )}
     <div className="flex gap-2 mt-2">
       <Button
         type="submit"
@@ -129,5 +136,10 @@ const LoginPage = () => {
 </Card>
     );
 };
-
-export default LoginPage;
+export default function Page() {
+  return (
+    <Suspense fallback={null}>
+      <LoginPage />
+    </Suspense>
+  );
+}
