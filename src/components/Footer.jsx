@@ -2,10 +2,10 @@
 
 const Footer = () => {
     return (
-  <div>
-  <footer className="footer sm:footer-horizontal bg-[#FF9A3C] text-base-content p-10">
+  <div className="flex justify-center flex-col items-center bg-[#FF9A3C]  ">
+  <footer className="footer sm:footer-horizontal text-base-content p-10 max-w-7xl mx-auto">
     <nav>
-      <h6 className="footer-title text-white">SunCart</h6>
+      <h6 className="footer-title text-black">SunCart</h6>
       <p className="text-sm max-w-xs text-white/80">
         Your one-stop summer essentials store — sunglasses, outfits, skincare & beach gear.
       </p>
@@ -42,7 +42,6 @@ const Footer = () => {
     </nav>
   </footer>
 
-  {/* Copyright is now a sibling of <footer>, not a grid child */}
   <div className="bg-[#FF9A3C] border-t border-white/30 py-3 text-center text-white/70 text-xs w-full">
     © {new Date().getFullYear()} SunCart. All rights reserved.
   </div>
