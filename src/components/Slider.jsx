@@ -15,7 +15,7 @@ const Slider = () => {
 
 
     return (
-       <div className="w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] relative overflow-hidden rounded-3xl shadow-lg my-4">
+       <div className="w-full mx-auto aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] relative overflow-hidden rounded-3xl shadow-lg my-4">
 
         {
             transitions((style,i)=>(
@@ -24,8 +24,10 @@ const Slider = () => {
                                 src={slides[i]}
                                 fill
                                 alt="slider" 
-                                className="object-cover object-top"
+                                className="object-cover object-center"
                                 priority
+                                sizes="100vw"
+                                
                             />
                 </animated.div>
             ))

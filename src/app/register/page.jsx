@@ -37,12 +37,12 @@ const RegisterPage = () => {
 
   };
     return (
-   
-<Card className="border-orange-100 border-2 mx-auto w-125 py-10 mt-5 bg-orange-50/40 shadow-sm rounded-2xl my-10">
-  <h1 className="text-center text-2xl font-bold text-orange-700 mb-1">Sign Up</h1>
-  <p className="text-center text-sm text-orange-400 mb-6">Join us this summer ☀️</p>
+            <Card className="border-orange-100 border-2 mx-auto w-full max-w-md px-4 sm:px-6 py-8 sm:py-10 mt-5 bg-orange-50/40 shadow-sm rounded-2xl my-10">
+  <h1 className="text-center text-xl sm:text-2xl font-bold text-orange-700 mb-1">Sign Up</h1>
+  <p className="text-center text-xs sm:text-sm text-orange-400 mb-6">Join us this summer ☀️</p>
 
-  <Form className="flex w-96 mx-auto flex-col gap-5" onSubmit={onSubmit}>
+  <Form className="flex w-full sm:w-96 mx-auto flex-col gap-5" onSubmit={onSubmit}>
+    
     <TextField isRequired name="name" type="text">
       <Label className="text-sm font-medium text-orange-800">Name</Label>
       <Input className="mt-1 w-full rounded-xl border border-orange-200 bg-white px-4 py-2 text-sm placeholder:text-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Enter your name" />
@@ -78,22 +78,26 @@ const RegisterPage = () => {
       <FieldError className="text-xs text-red-400 mt-1" />
     </TextField>
 
-    <div className="flex gap-3 pt-1">
-      <Button type="submit" className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium px-5 py-2 rounded-xl transition-colors">
+    <div className="flex flex-col sm:flex-row gap-3 pt-1">
+      <Button type="submit" className="w-full sm:w-auto flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium px-5 py-2 rounded-xl transition-colors">
         <Check className="w-4 h-4" />
         Submit
       </Button>
-      <Button type="reset" variant="secondary" className="text-sm text-orange-500 border border-orange-200 hover:bg-orange-100 px-5 py-2 rounded-xl transition-colors">
+
+      <Button type="reset" variant="secondary" className="w-full sm:w-auto text-sm text-orange-500 border border-orange-200 hover:bg-orange-100 px-5 py-2 rounded-xl transition-colors">
         Reset
       </Button>
-      <Link href="/login" className="inline-block">
-    <Button type="button" variant="secondary" className="text-sm text-orange-500 border border-orange-200 hover:bg-orange-100 px-5 py-2 rounded-xl transition-colors">
-      Login
-    </Button>
-  </Link>
+
+      <Link href="/login" className="w-full sm:w-auto">
+        <Button type="button" variant="secondary" className="w-full sm:w-auto text-sm text-orange-500 border border-orange-200 hover:bg-orange-100 px-5 py-2 rounded-xl transition-colors">
+          Login
+        </Button>
+      </Link>
     </div>
+
   </Form>
 </Card>
+
     );
 };
 
